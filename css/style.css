@@ -47,7 +47,7 @@ img {
 
 }
 
-button{
+button, a.button{
   font-size: .5em;
   margin-left: auto;
   margin-right: auto;
@@ -73,7 +73,7 @@ button{
 }
 
 .white {
-    color: black;
+    color: #004480;
     padding: 1em;
     text-align: center;
     border: 2px solid #004480;
