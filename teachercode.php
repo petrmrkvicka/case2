@@ -18,7 +18,7 @@
 </header>
 
 <h2> This is your class' code <h2>
-  <h1> <? echo $_POST['hash']; ?> <h1>
+  <h1> <?php echo $_POST['hash']; ?> <h1>
 
 
 
