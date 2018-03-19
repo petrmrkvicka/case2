@@ -118,7 +118,85 @@ button, a.button, input[type="submit"] {
     padding: 10px;
     border-radius: 7px;
     width: 80vw;
-
-
-
 }
+  
+  
+//Andy Le Quach code start
+.theRightAnswerDiv {
+display: none;
+height: 100vh;
+width: 100vw;
+}
+
+
+.theWrongAnswerDiv {
+display: none;
+}
+
+.theRightAnswerDiv h3 {
+display: block;
+margin: auto;
+text-align: center;
+color: white;
+margin-top: 50px;
+font-size: 30px;
+margin-bottom: 50px;
+}
+
+.theWrongAnswerDiv h3 {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.theRightAnswerDiv p {
+display: block;
+margin: auto;
+width: 80vw;
+color: white;
+line-height: 1.5;
+}
+
+.theWrongAnswerDiv p {
+  display: block;
+  margin: auto;
+  width: 80vw;
+  color: white;
+  line-height: 1.5;
+}
+
+.theRightAnswerDiv button {
+  display: block;
+  margin: auto;
+margin-top: 50px;
+color: black;
+text-align: center;
+border: 2px solid #004480;
+padding: 10px;
+border-radius: 7px;
+width: 80vw;
+font-size: 1em;
+background-color: white;
+box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
+}
+
+.theWrongAnswerDiv button {
+  display: block;
+  margin: auto;
+margin-top: 50px;
+color: black;
+text-align: center;
+border: 2px solid #004480;
+padding: 10px;
+border-radius: 7px;
+width: 80vw;
+font-size: 1em;
+background-color: white;
+box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
+}
+
+// Andy Le Quach code DONE
