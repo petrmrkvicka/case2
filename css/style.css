@@ -1,5 +1,24 @@
 @import 'https://raw.githubusercontent.com/petrmrkvicka/case2/blob/master/fonts/._futura_bold_font-webfont.woff';
 
+@font-face {
+  font-family: 'futurabold';
+  src: url('../fonts/futura_bold_font-webfont.woff2') format('woff2'),
+  url('../fonts/futura_bold_font-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'futurabook';
+  src: url('../fonts/futura_book_font-webfont.woff2') format('woff2'),
+  url('../fonts/futura_book_font-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+
+
 body{
   width: 100vw;
   height: 100vh;
@@ -7,7 +26,6 @@ body{
   border: 0%;
   padding-top: 3em;
   padding-bottom: 5%;
-  font-family: '_futura_bold_font-webfont', sans-serif;
   overflow: hidden;
 
 
@@ -21,14 +39,15 @@ body{
 h1{
   text-align: center;
   line-height: normal;
-  font-size: 2.3em;
-  padding: 1.8em 0em;
+  font-size: 4em;
+  font-family: 'futurabold';
 
 
 }
 
 p {
   text-align: center;
+  font-family: 'futurabold';
 
 
 }
@@ -41,6 +60,7 @@ input[type=text], select {
     border: 2px solid #004480;
     border-radius: 3px;
     box-sizing: border-box;
+    font-family: 'futurabook';
   }
 
 img {
@@ -59,7 +79,7 @@ img {
   display:
 }
 
-button,  {
+button, a.button {
   font-size: .5em;
   margin-left: auto;
   margin-right: auto;
@@ -69,6 +89,7 @@ button,  {
   border-radius: 3px;
   text-decoration: none;
   font-size: 1em;
+  font-family: 'futurabook';
 
 
   }
