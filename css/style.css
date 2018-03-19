@@ -29,15 +29,14 @@ h1{
 
 p {
   text-align: center;
-  font-family: '_futura_bold_font-webfont', sans-serif;
 
 
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 80vw;
     padding: 12px 20px;
-    margin: auto 0;
+    margin: 2% auto;
     display: inline-block;
     border: 2px solid #004480;
     border-radius: 3px;
@@ -55,7 +54,12 @@ img {
 
 }
 
-button, a{
+.arrow {
+  height: 2em;
+  display:
+}
+
+button,  {
   font-size: .5em;
   margin-left: auto;
   margin-right: auto;
