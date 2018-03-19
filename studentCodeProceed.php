@@ -21,13 +21,13 @@ $sql1 = "SELECT * FROM class WHERE hash = '$hash'";
 $result1 = mysql_query($sql1);
 
 if (mysql_num_rows($result1)==1) {
+  setcookie("hash", "$hash");
 header("Location: studentteam.html");
-setcookie("hash", "$hash");
 die;
 }
 else{
-  header("Location: studentcode.html");
   alert("This class doesn't exist");
+  header("Location: studentcode.html");
 }
 
 ?>
