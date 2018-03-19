@@ -16,18 +16,19 @@ if ($conn->connect_error) {
 }
 
 $hash = $_GET['Code'];
+echo $result1;
 
-$sql1 = "SELECT * FROM class WHERE hash = '$hash'";
-$result1 = mysql_query($sql1);
+$sql1 = "SELECT * FROM class WHERE hash='$hash'";
+$result1 = mysqli_query($conn,$sql1);
 
-if (mysql_num_rows($result1)==1) {
+if (mysqli_num_rows($result1)==1) {
   setcookie("hash", "$hash");
-header("Location: studentteam.html");
-die;
+header("Location: studentteam.php");
 }
 else{
-  alert("This class doesn't exist");
   header("Location: studentcode.html");
+  echo "<script type=\"text/javascript\">alert(\"This class doesn't exist!\");</script>";
 }
+
 
 ?>
