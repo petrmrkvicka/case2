@@ -47,7 +47,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div class=\"question\" id=\"$row[ID]\">\n";
         echo "<img src=\"images/$row[picture_src]\">\n";
-        echo "<h2 class=\"booom\">$row[question]</h2>\n";
+        echo "<p>$row[question]</p>\n";
+	    
         echo "<button class=\"blue\"";
             if($row['rightAnswer']==1){
               echo " onclick=\"right()\"";}
@@ -65,6 +66,8 @@ if ($result->num_rows > 0) {
               echo " onclick=\"right()\"";}
               else {echo " onclick=\"wrong()\"";}
         echo ">$row[answer3]</button>\n";
+	    
+	    echo "</div>";
 
 
         //right
