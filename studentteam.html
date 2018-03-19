@@ -15,17 +15,18 @@
 	<img src="images/ancient-feuds.svg" alt="AU logo">
 
 </header>
-
+<form action="studentAddTeam.php" method="GET">
 <h2> Create your team </h2>
-<input type="text" name="Team" value="Name your team"> <br>
+<input type="text" name="Team" placeholder="Name your team" required> <br>
 
 <h3> Add your classmates <h3>
-  <input type="text" name="Team member" value="Team member"> <br>
-  <input type="text" name="Team member" value="Team member"> <br>
-  <input type="text" name="Team member" value="Team member"> <br>
+  <input type="text" name="team_member[]" placeholder="Team member 1" required> <br>
+  <input type="text" name="team_member[]" placeholder="Team member 2"> <br>
+  <input type="text" name="team_member[]" placeholder="Team member 3"> <br>
   <button class="+"> + </button> <br>
 
-<a href="information.html"><button class="blue"> CREATE NEW TEAM </button> </a> <br>
+<input type="submit" class="blue button" value="CREATE NEW TEAM"><br>
+</form>
 
 
 
