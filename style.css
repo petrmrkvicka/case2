@@ -17,12 +17,6 @@
 
 }
 
-<<<<<<< HEAD
-*{
-  outline:none
-}
-=======
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 
 body{
   width: 100vw;
@@ -33,17 +27,11 @@ body{
   padding-bottom: 5%;
   font-family: '_futura_bold_font-webfont', sans-serif;
   overflow: hidden;
-<<<<<<< HEAD
-}
-
-
-=======
 
 }
 
 
 
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 h1{
   text-align: center;
   line-height: normal;
@@ -52,7 +40,7 @@ h1{
   font-family: 'futurabold';
 }
 
-p, h3 {
+p {
   text-align: center;
   font-family: 'futurabook';
 
@@ -149,25 +137,11 @@ button, a.button {
     border-radius: 7px;
     width: 80vw;
 
-<<<<<<< HEAD
-
-
-}
-
-
-
-
-
-.theRightAnswerDiv, .theWrongAnswerDiv, .questionDiv {
-height: 100vh;
-width: 100vw;
-=======
 }
 
 
 form {
   margin-top: 20em;
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 }
 
 
@@ -178,23 +152,12 @@ form {
 
 }
 
-<<<<<<< HEAD
-.theWrongAnswerDiv h3 {
- display: block;
- margin: auto;
- text-align: center;
- color: white;
- margin-top: 50px;
- font-size: 30px;
- margin-bottom: 50px;
-=======
 h2 {
   font-family: 'futurabold';
   font-size: 2em;
   margin: auto;
   margin-top: 5em;
   text-align: center;
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 }
 
 #createteam {
@@ -204,44 +167,6 @@ h2 {
   margin-top: 4em;
 }
 
-<<<<<<< HEAD
-.theWrongAnswerDiv p {
- display: block;
- margin: auto;
- width: 80vw;
- color: white;
- line-height: 1.5;
-}
-
-.theRightAnswerDiv button {
- display: block;
- margin: auto;
-margin-top: 50px;
-color: black;
-text-align: center;
-border: 2px solid #004480;
-padding: 10px;
-border-radius: 7px;
-width: 80vw;
-font-size: 1em;
-background-color: white;
-box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
-}
-
-.theWrongAnswerDiv button {
- display: block;
- margin: auto;
-margin-top: 50px;
-color: black;
-text-align: center;
-border: 2px solid #004480;
-padding: 10px;
-border-radius: 7px;
-width: 80vw;
-font-size: 1em;
-background-color: white;
-box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
-=======
 h3 {
   font-family: 'futurabold';
   margin: auto;
@@ -273,5 +198,4 @@ margin-bottom: 3.5em;
 
 #team {
   padding: 0px;
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 }
