@@ -195,3 +195,43 @@ font-size: 1em;
 background-color: white;
 box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
 }
+
+
+/* For desktop START */
+
+@media screen and (min-width: 767px) {
+
+#mobile {
+  display: none;
+
+}
+
+
+#desktop {
+  display: block;
+}
+
+#desktop_logo {
+  display: block;
+  margin: auto;
+  width: 50vw;
+  margin-top:75px;
+}
+
+#desktop p {
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+font-size: 20px;
+line-height: 1.5;
+}
+
+
+
+}
+
+/* For desktop END */
+
+
+
