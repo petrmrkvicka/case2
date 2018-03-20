@@ -19,9 +19,7 @@ if ($conn->connect_error) {
 $className = $_GET['className'];
 $email = $_GET['email'];
 
-//creates a random number between 100000 and 999999 to get af random 6 digit number
 $hash = (rand(100000,999999));
-
 
 $sql = "INSERT INTO class (ID, hash, class_name, email)
 VALUES (0, '$hash', '$className', '$email')";

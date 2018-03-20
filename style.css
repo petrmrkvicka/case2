@@ -32,8 +32,6 @@ body{
 
 
 
-
-
 h1{
   text-align: center;
   line-height: normal;
@@ -196,4 +194,8 @@ margin-bottom: 3.5em;
 
 .continue {
   margin-top: 9em;
+}
+
+#team {
+  padding: 0px;
 }
