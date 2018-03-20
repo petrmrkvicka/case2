@@ -156,6 +156,7 @@ margin: auto;
 width: 80%;
 color: white;
 line-height: 1.5;
+   font-family: 'futurabook';
 }
 
 .theWrongAnswerDiv p {
@@ -164,6 +165,7 @@ line-height: 1.5;
  width: 80%;
  color: white;
  line-height: 1.5;
+ font-family: 'futurabook';
 }
 
 .theRightAnswerDiv button {
