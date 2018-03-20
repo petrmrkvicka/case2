@@ -15,13 +15,13 @@ if ($conn->connect_error) {
 }
 ?>
 
-<html lang= "en">
+<html lang="en">
 
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Antikmuseet</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -33,57 +33,90 @@ if ($conn->connect_error) {
 </header>
 
 <?php
+$i = 1;
 $sql = "SELECT * FROM questions ORDER BY RAND()";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
+
     // output data of each row
     while($row = $result->fetch_assoc()) {
 
-      //displays a div with elements in it (such as img, p and buttons)
-        echo "<div class=\"question\" id=\"$row[ID]\">\n";
+      //displays a div with elements in it (such as img, headings and buttons)
+        echo "<div class=\"questionDiv\" id=\"qu$i\">\n";
         echo "<img src=\"images/$row[picture_src]\">\n";
-        echo "<p>$row[question]</p>\n";
+        echo "<h3>$row[question]</h3>\n";
 
-        
+
 // Displays 3 buttons
         echo "<button class=\"blue\"";
             if($row['rightAnswer']==1){
               echo " onclick=\"right()\"";}
               else {echo " onclick=\"wrong()\"";}
         echo ">$row[answer1]</button>\n";
-        
+
         echo "<button class=\"blue\"";
             if($row['rightAnswer']==2){
               echo " onclick=\"right()\"";}
               else {echo " onclick=\"wrong()\"";}
         echo ">$row[answer2]</button>\n";
-        
+
         echo "<button class=\"blue\"";
             if($row['rightAnswer']==3){
               echo " onclick=\"right()\"";}
               else {echo " onclick=\"wrong()\"";}
         echo ">$row[answer3]</button>\n";
 
-	    echo "</div>";
 
-      
+
         //Displays right answer screen
-        echo "<div class=\"theRightAnswerDiv\">";
+        echo "<div class=\"theRightAnswerDiv rA$i\">";
         echo "<h3>YOU NERD!</h3>";
-        echo "<p>Clytios (Klytios) was one of the Giants, sons of Gaia, killed by Hecate during the Gigantomachy, the battle of the Giants versus the Olympian gods. He was powerful beyond defeat and unsurpassed in bodily size. He and his brothers would hurl flaming trees and rocks into the heavens to attack the gods</p>";
+        echo "<p>$row[descr]</p>";
         echo "<button>CONTINUE</button></div>\n";
 
-        
+
         //Displays wrong answer screen
-        echo "<div class=\"theWrongAnswerDiv\">";
+        echo "<div class=\"theWrongAnswerDiv wA$i\">";
         echo "<h3>YOU SUCK!</h3>";
         echo "<p>The right answer is of course <b>$row[rightAnswerText]</b></p>";
-        echo "<p>Clytios (Klytios) was one of the Giants, sons of Gaia, killed by Hecate during the Gigantomachy, the battle of the Giants versus the Olympian gods. He was powerful beyond defeat and unsurpassed in bodily size. He and his brothers would hurl flaming trees and rocks into the heavens to attack the gods</p>";
+        echo "<p>$row[descr]</p>";
         echo "<button>CONTINUE</button></div>\n\n";
+
+        echo "</div>";
+
+        $i = $i + 1;
     }
 }
 ?>
 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script>
+
+  var counter = 0;
+  var questions = $(".questionDiv");
+  questions.hide();
+  questions.eq(counter).show();
+  console.log(counter);
+
+  function right(){
+    $(".theRightAnswerDiv").show();
+    $(".theRightAnswerDiv").css({
+      "position":"fixed",
+      "top":0
+  });
+  }
+
+
+  function wrong(){
+    $(".theWrongAnswerDiv").show();
+  }
+
+
+  </script>
 
 </body>
 </html>
