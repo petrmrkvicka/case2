@@ -79,7 +79,6 @@ if ($result->num_rows > 0) {
         echo "<div class=\"theWrongAnswerDiv wA$i\">";
         echo "<h3>YOU SUCK!</h3>";
         echo "<p>The right answer is of course <b>$row[rightAnswerText]</b></p>";
-	    echo "<br><br>";
         echo "<br><br>";
         echo "<p>$row[descr]</p>";
         echo "<button onclick=\"nextQuestion()\">CONTINUE</button></div>\n\n";
