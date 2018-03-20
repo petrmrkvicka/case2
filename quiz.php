@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="continue()">
 <header>
 
 	<a href="studentcode.html"><img class="arrow" src="./images/arrow.svg" alt="arrow"></a>
@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 
       //displays a div with elements in it (such as img, headings and buttons)
-        echo "<div class=\"questionDiv\" id=\"qu$i\">\n";
+        echo "<div class=\"questionDiv\" id=\"$row[ID]\">\n";
         echo "<img src=\"images/$row[picture_src]\">\n";
         echo "<h3>$row[question]</h3>\n";
 
@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
         echo "<div class=\"theRightAnswerDiv rA$i\">";
         echo "<h3>YOU NERD!</h3>";
         echo "<p>$row[descr]</p>";
-        echo "<button>CONTINUE</button></div>\n";
+        echo "<button onclick=\"continue()\">CONTINUE</button></div>\n";
 
 
         //Displays wrong answer screen
@@ -80,7 +80,7 @@ if ($result->num_rows > 0) {
         echo "<h3>YOU SUCK!</h3>";
         echo "<p>The right answer is of course <b>$row[rightAnswerText]</b></p>";
         echo "<p>$row[descr]</p>";
-        echo "<button>CONTINUE</button></div>\n\n";
+        echo "<button onclick=\"continue()\">CONTINUE</button></div>\n\n";
 
         echo "</div>";
 
@@ -95,25 +95,63 @@ if ($result->num_rows > 0) {
   crossorigin="anonymous"></script>
 
   <script>
-
   var counter = 0;
   var questions = $(".questionDiv");
+  var rightAnswers = $(".theRightAnswerDiv");
+  var wrongAnswers = $(".theWrongAnswerDiv");
+  var header = $("header");
   questions.hide();
+  rightAnswers.hide();
+  wrongAnswers.hide();
   questions.eq(counter).show();
-  console.log(counter);
-
-  function right(){
-    $(".theRightAnswerDiv").show();
-    $(".theRightAnswerDiv").css({
-      "position":"fixed",
-      "top":0
-  });
-  }
 
 
-  function wrong(){
-    $(".theWrongAnswerDiv").show();
-  }
+
+
+
+
+function right(){
+  rightAnswers.eq(counter).show();
+  rightAnswers.eq(counter).css({
+    "position":"fixed",
+    "top":0,
+    "left":0,
+    "right":0,
+    "bottom":0,
+    "background":"rgba(32,120,1,0.8)"
+},500);
+
+header.css({
+  "filter":"blur(10px)"
+},500)
+
+questions.eq(counter).children().not(rightAnswers.eq(counter)).css({
+  "filter":"blur(10px)"
+},500)
+}
+
+function wrong(){
+  wrongAnswers.eq(counter).show();
+  wrongAnswers.eq(counter).css({
+    "position":"fixed",
+    "top":0,
+    "left":0,
+    "right":0,
+    "bottom":0,
+    "background":"rgba(143,17,0,0.8)"
+},500);
+
+header.css({
+  "filter":"blur(10px)"
+},500)
+
+questions.eq(counter).children().not(wrongAnswers.eq(counter)).css({
+  "filter":"blur(10px)"
+},500)
+}
+
+
+
 
 
   </script>

@@ -17,12 +17,9 @@
 
 }
 
-<<<<<<< HEAD
 *{
   outline:none
 }
-=======
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 
 body{
   width: 100vw;
@@ -31,30 +28,22 @@ body{
   border: 0%;
   padding-top: 3em;
   padding-bottom: 5%;
-  font-family: '_futura_bold_font-webfont', sans-serif;
   overflow: hidden;
-<<<<<<< HEAD
 }
 
 
-=======
-
-}
-
-
-
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 h1{
   text-align: center;
   line-height: normal;
-  font-size: 2.3em;
-  padding: 1.8em 0em;
+  font-size: 4em;
   font-family: 'futurabold';
+
+
 }
 
 p, h3 {
   text-align: center;
-  font-family: 'futurabook';
+  font-family: 'futurabold';
 
 
 }
@@ -62,8 +51,8 @@ p, h3 {
 input[type=text], select {
     width: 80vw;
     padding: 12px 20px;
-    margin: auto;
-    display: block;
+    margin: 2% auto;
+    display: inline-block;
     border: 2px solid #004480;
     border-radius: 3px;
     box-sizing: border-box;
@@ -71,45 +60,22 @@ input[type=text], select {
   }
 
 img {
-  width: 80vw;
-  max-width: 475px;
+  width: 75vw;
+  max-width: 400px;
   top: 10%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1em;
 
 
 }
 
 .arrow {
   height: 2em;
-  display: flex;
-  width: 5em;
-  margin: 0px;
+  display:
 }
 
-.logo {
-  height: 2em;
-  width: auto;
-margin: 0px 0px 5px 0px;
-}
-
-.logo2 {
-  height: 2em;
-  width: auto;
-margin: 0px 0px 1em 2.7em;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  padding: none;
-}
-
-button, a.button {
+button, a.button, input[type="submit"] {
   font-size: .5em;
   margin-left: auto;
   margin-right: auto;
@@ -119,12 +85,13 @@ button, a.button {
   border-radius: 3px;
   text-decoration: none;
   font-size: 1em;
-  font-family: 'futurabook'
+  font-family: 'futurabook';
+
 
   }
 
 
-.blue {
+.blue, input[type="submit"] {
     background-image:
     linear-gradient(to right,
     #004480 0%,
@@ -135,8 +102,7 @@ button, a.button {
     padding: 10px;
     border-radius: 7px;
     width: 80vw;
-    margin-bottom: 0.5em;
-
+    margin-bottom: 1.5em;
 
 }
 
@@ -149,7 +115,6 @@ button, a.button {
     border-radius: 7px;
     width: 80vw;
 
-<<<<<<< HEAD
 
 
 }
@@ -158,27 +123,23 @@ button, a.button {
 
 
 
-.theRightAnswerDiv, .theWrongAnswerDiv, .questionDiv {
-height: 100vh;
-width: 100vw;
-=======
+.questionDiv {
+height: 90vh;
+width: 95vw;
+margin-left:auto;
+margin-right: auto;
 }
 
-
-form {
-  margin-top: 20em;
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
+.theRightAnswerDiv h3 {
+display: block;
+margin: auto;
+text-align: center;
+color: white;
+margin-top: 50px;
+font-size: 30px;
+margin-bottom: 50px;
 }
 
-
-#wifi {
-  font-size: 0.6em;
-  width: 70%;
-  margin: auto;
-
-}
-
-<<<<<<< HEAD
 .theWrongAnswerDiv h3 {
  display: block;
  margin: auto;
@@ -187,28 +148,20 @@ form {
  margin-top: 50px;
  font-size: 30px;
  margin-bottom: 50px;
-=======
-h2 {
-  font-family: 'futurabold';
-  font-size: 2em;
-  margin: auto;
-  margin-top: 5em;
-  text-align: center;
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 }
 
-#createteam {
-  width: 80%;
-  text-align: left;
-  margin-bottom: 0.3em;
-  margin-top: 4em;
+.theRightAnswerDiv p {
+display: block;
+margin: auto;
+width: 80%;
+color: white;
+line-height: 1.5;
 }
 
-<<<<<<< HEAD
 .theWrongAnswerDiv p {
  display: block;
  margin: auto;
- width: 80vw;
+ width: 80%;
  color: white;
  line-height: 1.5;
 }
@@ -241,37 +194,4 @@ width: 80vw;
 font-size: 1em;
 background-color: white;
 box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
-=======
-h3 {
-  font-family: 'futurabold';
-  margin: auto;
-  margin-bottom: 0.3em;
-  width: 80%;
-}
-
-.congratulations {
-  padding-bottom: 0em;
-  margin-bottom: 0em;
-  padding-top: 3.5em;
-}
-
-.goodtogo {
-margin-top: 0px;
-font-size: 1.25em;
-margin-bottom: 3.5em;
-}
-
-.AU-GUEST {
-  font-size: 1.25em;
-  width: 80%;
-  margin: auto;
-}
-
-.continue {
-  margin-top: 9em;
-}
-
-#team {
-  padding: 0px;
->>>>>>> ba8116d0a96e99e8ba2a6dd76e53860d443d82ab
 }
