@@ -17,6 +17,10 @@
 
 }
 
+#desktop {
+  display: none;
+}
+
 *{
   outline:none
 }
@@ -41,14 +45,18 @@ h1{
 
 }
 
-p, h3 {
+p, h3, h2 {
   text-align: center;
   font-family: 'futurabold';
 
 
 }
 
-input[type=text], select {
+.theWrongAnswerDiv p span{
+  font-family: 'futurabold';
+}
+
+input[type=text], input[type=number], select {
     width: 80vw;
     padding: 12px 20px;
     margin: 2% auto;
@@ -57,6 +65,10 @@ input[type=text], select {
     border-radius: 3px;
     box-sizing: border-box;
     font-family: 'futurabook';
+    margin-left:10vw;
+  }
+  #wifi{
+    margin:auto 10vw
   }
 
 img {
@@ -72,7 +84,16 @@ img {
 
 .arrow {
   height: 2em;
-  display:
+  display: inline-block;
+  float:left;
+  width:6em
+}
+
+img[src="images/aulogo_blue.svg"], img[src="images/ancient-feuds.svg"]{
+  height:2em;
+  width:50%;
+  text-align:left;
+  display:inline-block;
 }
 
 button, a.button, input[type="submit"] {
@@ -156,7 +177,8 @@ margin: auto;
 width: 80%;
 color: white;
 line-height: 1.5;
-   font-family: 'futurabook';
+font-family: 'futurabook';
+
 }
 
 .theWrongAnswerDiv p {
@@ -166,6 +188,7 @@ line-height: 1.5;
  color: white;
  line-height: 1.5;
  font-family: 'futurabook';
+
 }
 
 .theRightAnswerDiv button {
@@ -234,6 +257,3 @@ line-height: 1.5;
 }
 
 /* For desktop END */
-
-
-

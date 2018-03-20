@@ -78,7 +78,7 @@ if ($result->num_rows > 0) {
         //Displays wrong answer screen
         echo "<div class=\"theWrongAnswerDiv wA$i\">";
         echo "<h3>YOU SUCK!</h3>";
-        echo "<p>The right answer is of course <b>$row[rightAnswerText]</b></p>";
+        echo "<p>The right answer is of course <span>$row[rightAnswerText]</span></p>";
         echo "<br><br>";
         echo "<p>$row[descr]</p>";
         echo "<button onclick=\"nextQuestion()\">CONTINUE</button></div>\n\n";
@@ -91,8 +91,13 @@ if ($result->num_rows > 0) {
 ?>
 
 <div class="questionDiv">
-  <h3>You are finished! Now go and have fun, you!</h3>
-  <a href="index.html"><button class="blue">CONTINUE</button></a>
+  <h2 class="congratulations">CONGRATULATIONS</h2>
+<p class="goodtogo">You finished the game</p>
+
+<p class="AU-GUEST">Return to the reception or explore the rest of the museum</p>
+
+
+  <a href="index.html"><button class="blue continue"> CONTINUE </button> </a>
 </div>
 
 <script
