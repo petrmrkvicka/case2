@@ -80,6 +80,7 @@ if ($result->num_rows > 0) {
         echo "<h3>YOU SUCK!</h3>";
         echo "<p>The right answer is of course <b>$row[rightAnswerText]</b></p>";
 	    echo "<br><br>";
+        echo "<br><br>";
         echo "<p>$row[descr]</p>";
         echo "<button onclick=\"nextQuestion()\">CONTINUE</button></div>\n\n";
 
@@ -89,6 +90,11 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
+
+<div class="questionDiv">
+  <h3>You are finished! Now go and have fun, you!</h3>
+  <a href="index.html"><button class="blue">CONTINUE</button></a>
+</div>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -102,11 +108,14 @@ if ($result->num_rows > 0) {
   var questions = $(".questionDiv");
   var rightAnswers = $(".theRightAnswerDiv");
   var wrongAnswers = $(".theWrongAnswerDiv");
+  var final = $(".final");
   var header = $("header");
   questions.hide();
   rightAnswers.hide();
   wrongAnswers.hide();
   questions.eq(counter).show();
+  final.hide();
+
 
 
 
@@ -159,7 +168,11 @@ function nextQuestion() {
   counter++;
   questions.eq(counter).show();
   header.css({"filter":"blur(0px)"});
+
+
 }
+
+
 
 
   </script>
