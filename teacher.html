@@ -6,25 +6,23 @@
 	<meta charset="utf-8">
 	<title>Antikmuseet</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
 
 <header>
 
-<section class="flex">
 	<a href="welcome.html"><img class="arrow" src="./images/arrow.svg" alt="arrow"></a>
-	<img src="images/ancient-feuds.svg" alt="AU logo" class="logo">
-</section>
+	<img src="images/ancient-feuds.svg" alt="AU logo">
 
 </header>
 <form action="codeClass.php" method="GET">
-<input type="text" name="className" placeholder="Name your class" required class="input"> <br>
-<input type="text" name="email" placeholder="Insert your email address*" class="input"> <br>
-<button class="blue"> CREATE A CLASS </button>
+<input type="text" name="className" placeholder="Name your class" required> <br>
+<input type="text" name="email" placeholder="Insert your email address*" required> <br>
+<input type="submit" class="blue" value="CREATE A CLASS">
 	</form>
 	<br>
-<p id="wifi"> *You will get the class' results on this email and the code for
+<p> *You will get the class' results on this email and the code for
   visiting the results later on. Read more about personal information using.
 </p>
 
