@@ -225,6 +225,26 @@ background-color: white;
 box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.16);
 }
 
+@keyframes popsin{
+            0% {opacity: 0;
+            transform: translateY(10%);
+            }
+            100%{
+                opacity:1;
+                transform:translateY(0%)
+            }
+        }
+       
+        .next{
+            opacity:0;
+            transform: translateY(10%);
+            animation-name: popsin;
+            animation-duration: 0.5s;
+            animation-timing-function:  ease-in;
+            animation-delay:  4s ;
+            animation-fill-mode: forwards;
+            }
+
 
 /* For desktop START */
 
